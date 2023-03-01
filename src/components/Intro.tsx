@@ -5,12 +5,12 @@ import Typewriter from "typewriter-effect";
 export const Intro = () => {
   return (
     <Grid container spacing={4} mt={2}>
-      <Grid item xs={7}>
+      <Grid item xs={8}>
         <Box
           display="flex"
           alignItems="flex-start"
           textAlign="left"
-          p={2}
+          px={14}
           flexDirection="column"
         >
           <Typography variant="h5" color="#c4cfde">
@@ -47,7 +47,7 @@ export const Intro = () => {
           />
         </Box>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={4}>
         <Box alignItems="center">
           <img src={require("assets/myself.png")} className="avatar--intro" />
         </Box>

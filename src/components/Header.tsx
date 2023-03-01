@@ -8,21 +8,8 @@ import {
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { useEffect, useState } from "react";
 
-export const Header = () => {
+export const Header = ({ offset }: { offset: number }) => {
   const matches = useMediaQuery("(min-width:1200px)");
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
-    // clean up code
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // useEffect(() => {
-  //   console.log(offset);
-  // }, [offset]);
 
   return (
     <Box
@@ -34,9 +21,9 @@ export const Header = () => {
         alignItems: "center",
         px: 2,
         background: "#212428",
-        position: offset > 75 ? "fixed" : "static",
+        position: offset > 10 ? "fixed" : "static",
         top: 0,
-        opacity: offset > 75 ? 0.5 : 1,
+        opacity: offset > 10 ? 0.5 : 1,
       }}
     >
       <Box display="flex">
