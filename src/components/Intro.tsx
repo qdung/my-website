@@ -14,7 +14,7 @@ export const Intro = () => {
           flexDirection="column"
         >
           <Typography variant="h5" color="#c4cfde">
-            WELCOME TO MY WORLD
+            WELCOME TO MY HOME
           </Typography>
           <Box display="flex" flexDirection="row" alignItems="center">
             <Typography variant="h2" mr={1}>
@@ -49,7 +49,7 @@ export const Intro = () => {
       </Grid>
       <Grid item xs={4}>
         <Box alignItems="center">
-          <img src={require("assets/myself.png")} className="avatar--intro" />
+          <img src={require("assets/myself.webp")} className="avatar--intro" />
         </Box>
       </Grid>
     </Grid>

@@ -1,8 +1,28 @@
-import { Box, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
-import { Features, Header, Intro } from "components";
+import {
+  Box,
+  createTheme,
+  CssBaseline,
+  Divider as Divide,
+  ThemeProvider,
+  Typography,
+} from "@mui/material";
+import { Contact, Features, Header, Intro, Portfolio } from "components";
 import { useEffect, useState } from "react";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "./App.css";
+
+const Divider = () => (
+  <Divide
+    sx={{
+      background: "#121415",
+      height: 1,
+      width: "88.5%",
+      alignSelf: "center",
+      mt: 16,
+      mb: 12,
+    }}
+  />
+);
 
 function App() {
   const theme = createTheme({
@@ -77,8 +97,13 @@ function App() {
                 },
               ]}
             />
-            {/* <img src={require("assets/img1.png")} /> */}
-            {/* <img src={require("assets/img2.png")} /> */}
+            <Divider />
+            <Portfolio />
+            <Divider />
+            <Contact />
+          </Box>
+          <Box sx={{ my: 8 }}>
+            <Typography>© 2023. All rights reserved by Joseph Dũng.</Typography>
           </Box>
         </Box>
       </ThemeProvider>
